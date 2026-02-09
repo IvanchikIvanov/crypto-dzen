@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="zen-verification" content="D4z7BzRdKwWheSqfvJ2oCf4mpAaXeMh92zVCafDuBt7SaJfX384VYFD8YT2VsZv5" />
+    <title>Crypto Digest - Ежедневные крипто-дайджесты</title>
+    <link rel="alternate" type="application/rss+xml" title="Crypto Digest RSS" href="/rss.xml">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .card h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        .rss-section {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        .rss-url {
+            font-family: 'Courier New', monospace;
+            background: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            margin: 0.5rem 0;
+            word-break: break-all;
+        }
+        .button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-right: 1rem;
+            margin-top: 0.5rem;
+        }
+        .button:hover {
+            background: #5568d3;
+        }
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .stat-card {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📊 Crypto Digest</h1>
+        <p>Ежедневные крипто-дайджесты для Яндекс.Дзен</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>🔗 RSS Лента</h2>
+            <p>Используйте эту ленту для автоматической публикации в Яндекс.Дзен:</p>
+            
+            <div class="rss-section">
+                <div class="rss-url" id="rssUrl">https://ivanchikivanov.github.io/crypto-dzen/rss.xml</div>
+            </div>
+            
+            <a href="/rss.xml" class="button" target="_blank">📡 Открыть RSS</a>
+            <a href="#" class="button" onclick="copyRss(); return false;">📋 Копировать URL</a>
+        </div>
+
+        <div class="card">
+            <h2>📈 Статистика</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">9</div>
+                    <div class="stat-label">Мониторимых каналов</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">270K+</div>
+                    <div class="stat-label">Общий охват</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">Статья в день</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>⚙️ Как подключить к Яндекс.Дзен</h2>
+            <ol style="padding-left: 1.5rem; line-height: 2;">
+                <li>Зайдите в <strong>Яндекс.Дзен</strong> → <strong>Настройки канала</strong></li>
+                <li>Перейдите в раздел <strong>"Источники"</strong></li>
+                <li>Нажмите <strong>"Добавить RSS"</strong></li>
+                <li>Вставьте URL ленты: <code>https://crypto-dzen.vercel.app/rss.xml</code></li>
+                <li>Дзен автоматически будет забирать новые статьи каждый день</li>
+            </ol>
+        </div>
+
+        <div class="card">
+            <h2>📝 Контент</h2>
+            <p>Дайджесты включают:</p>
+            <ul style="padding-left: 1.5rem; line-height: 2;">
+                <li>🔴 <strong>Рынок</strong> — движение цен, тренды</li>
+                <li>📈 <strong>Сигналы</strong> — торговые идеи и уровни</li>
+                <li>⛓️ <strong>On-Chain</strong> — анализ блокчейн-данных</li>
+                <li>⚡️ <strong>Новости</strong> — важные события индустрии</li>
+                <li>💡 <strong>Анализ</strong> — экспертные мнения и прогнозы</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 Crypto Digest | Автоматизированная публикация контента</p>
+    </div>
+
+    <script>
+        function copyRss() {
+            const url = document.getElementById('rssUrl').textContent;
+            navigator.clipboard.writeText(url).then(() => {
+                alert('✅ URL скопирован в буфер обмена!');
+            });
+        }
+    </script>
+</body>
+</html>
