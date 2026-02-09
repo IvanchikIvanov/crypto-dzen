@@ -1,0 +1,17 @@
+# Node modules
+node_modules/
+.vercel/
+
+# System files
+.DS_Store
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# Parent directory files - не коммитить
+../*
+
+# Исключения - коммитить только dzen-auto
+!../dzen-auto/
