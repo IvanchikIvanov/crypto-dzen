@@ -86,7 +86,7 @@ def main():
     generate_rss(
         articles_dir=str(articles_dir),
         output_file=str(output_file),
-        site_url="https://ivanchikivanov.github.io/crypto-dzen"
+        site_url="https://coolestdzen.netlify.app"
     )
 
 if __name__ == "__main__":
