@@ -38,6 +38,10 @@ def generate_rss(articles_dir="public/articles", output_file="public/rss.xml", s
         date = datetime.fromisoformat(article['date'])
         pub_date = date.strftime('%a, %d %b %Y %H:%M:%S +0000')
         
+        # Обложка для Яндекс.Дзен (enclosure обязателен!)
+        # Используем placeholder 1200x630 для крипто-дайджеста
+        cover_url = "https://picsum.photos/1200/630"
+        
         item = f"""
     <item>
       <title>{escape_xml(article['title'])}</title>
@@ -46,6 +50,7 @@ def generate_rss(articles_dir="public/articles", output_file="public/rss.xml", s
       <pubDate>{pub_date}</pubDate>
       <guid>{site_url}/{article['slug']}</guid>
       <category>{escape_xml(article.get('category', 'Криптовалюты'))}</category>
+      <enclosure url="{cover_url}" type="image/jpeg" length="150000"/>
       <content:encoded><![CDATA[{article['content']}]]></content:encoded>
     </item>"""
         
