@@ -15,3 +15,4 @@ node_modules/
 
 # Исключения - коммитить только dzen-auto
 !../dzen-auto/
+.git-credentials
