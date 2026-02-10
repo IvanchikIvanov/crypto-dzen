@@ -39,8 +39,8 @@ def generate_rss(articles_dir="public/articles", output_file="public/rss.xml", s
         pub_date = date.strftime('%a, %d %b %Y %H:%M:%S +0000')
         
         # Обложка для Яндекс.Дзен (enclosure обязателен!)
-        # Используем placeholder 1200x630 для крипто-дайджеста
-        cover_url = "https://picsum.photos/1200/630"
+        # Статичная крипто-обложка для всех статей
+        cover_url = f"{site_url}/cover.jpg"
         
         item = f"""
     <item>
