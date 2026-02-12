@@ -45,15 +45,30 @@ def main():
     
     print(result.stdout)
     
-    # 3. Информация о деплое
+    # 3. Синхронизация с nginx
+    print("\n🔄 Шаг 3: Синхронизация с nginx...")
+    result = subprocess.run(
+        ["bash", "sync_to_nginx.sh"],
+        cwd=workspace,
+        capture_output=True,
+        text=True
+    )
+    
+    if result.returncode != 0:
+        print(f"❌ Ошибка синхронизации:\n{result.stderr}")
+    else:
+        print(result.stdout)
+    
+    # 4. Информация о результате
     print("\n" + "="*60)
     print("✅ КОНТЕНТ ОБНОВЛЁН!")
     print("="*60)
-    print("\n📋 Следующие шаги:")
-    print("1. Запустите: cd /root/.openclaw/workspace/dzen-auto")
-    print("2. Деплой: vercel --prod")
-    print("\nИли настройте автоматический деплой через GitHub + Vercel.")
-    print("\n🔗 RSS URL: https://dzen-auto-a4jrr0g9m-ivanchikivanovs-projects.vercel.app/rss.xml")
+    print("\n📋 Доступно:")
+    print("- 🌐 Сайт: http://134.199.228.121/")
+    print("- 📡 RSS: http://134.199.228.121/rss.xml")
+    print("\n💡 Следующие шаги:")
+    print("1. Подключи домен (DuckDNS или купи)")
+    print("2. Обнови RSS URL в Яндекс.Дзен")
 
 if __name__ == "__main__":
     main()
