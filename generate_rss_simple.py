@@ -91,7 +91,7 @@ def main():
     generate_rss(
         articles_dir=str(articles_dir),
         output_file=str(output_file),
-        site_url="https://coolestdzen.netlify.app"
+        site_url="https://dzen-auto.vercel.app"
     )
 
 if __name__ == "__main__":
